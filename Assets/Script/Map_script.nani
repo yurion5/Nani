@@ -1,0 +1,45 @@
+#Start
+
+@hideUI ButtonMapUI
+@hidePrinter 
+@hideChars
+@hideUI Visual_Item_1
+@back Black
+
+@showUI MapUI
+
+
+
+@if exist_quest=5
+	@showUI LabelParkingQuest
+@else
+	@showUI LabelParking
+@endif
+
+
+
+@if exist_quest=1
+	@showUI LabelGarageQuest
+@elseif exist_quest=2
+	@showUI LabelGarageQuest
+@elseif exist_quest=4
+	@showUI LabelGarageQuest
+@else
+	@showUI LabelGarage
+@endif
+ 
+
+ 
+@if exist_quest=3
+	@showUI LabelTrashCanQuest
+@else
+	@showUI LabelTrashCan
+@endif
+
+
+@if ItemExist("Item_1")
+	@hideUI LabelTrashCan
+@endif
+
+
+@stop

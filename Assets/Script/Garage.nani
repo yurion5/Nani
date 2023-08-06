@@ -1,0 +1,110 @@
+#Start
+
+@hideChars
+
+@hideUI LabelGarage
+@hideUI LabelParking
+@hideUI LabelTrashCan
+@hideUI LabelGarageQuest
+@hideUI LabelParkingQuest
+@hideUI LabelTrashCanQuest
+@hideUI MapUI
+
+@showUI ButtonMapUI
+
+@back Locat_2
+
+@if exist_quest=1
+	@goto .Dialog_1
+	@stop
+@endif
+@if exist_quest=2
+	@goto .After_minigame
+	@stop
+@endif
+@if exist_quest=4
+	@set exist_quest=5
+	@set exist_quest_string="Go to Parking and choose a girl."
+	@goto .Dialog_3
+	@stop
+@endif
+@if exist_quest=5
+	@goto .#Dialog_3
+	@stop
+@endif
+@if exist_quest=6
+	@goto .After_quest_dialog
+	@stop
+@endif
+
+#Standart_dialog
+
+@char Jessy
+Jessy: No qwest.
+Jessy: No!
+
+@stop
+
+
+
+#Dialog_1
+
+@back Locat_2
+
+@char Jessy
+Jessy: Hi, man. This is a second dialog.
+Jessy: Do you want to play a cool game?
+
+@adventure
+@stop
+
+
+
+#After_minigame
+
+@stopBgm
+@bgm Hip_hop_beat loop:true volume:0.3
+@showUI ButtonMapUI
+@back Locat_2
+@char Jessy
+
+@set exist_quest=2
+@set exist_quest_string="Get quest from Jessy."
+
+Jessy: Cool game, yeah?
+Jessy: Go to the thrash cans for It!
+
+@set exist_quest=3
+@set exist_quest_string="Go to Trash cans and take It."
+
+@back Black
+@goto Trashcan.Start
+@stop
+
+
+
+#Dialog_3
+
+No one here either.... Very strange. I`ll go to Parking.
+
+@back Black
+@goto Parking.Start
+@stop
+
+
+#After_quest_dialog
+
+@char Jessy
+
+@if after_quest=1
+	Jessy: Why did you come? Leave!
+	@stop
+@endif
+@if after_quest=2
+	Jessy: And how can I thank you?
+	@stop
+@endif
+@if after_quest=3
+	Jessy: Why did you come? Leave!
+	@stop
+@endif

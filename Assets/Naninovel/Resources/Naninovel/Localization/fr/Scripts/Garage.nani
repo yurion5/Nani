@@ -1,0 +1,37 @@
+; English <en> to French <fr> localization document for `Garage` naninovel script
+
+# 284cbb8
+; Jessy: No qwest.
+Jessy: Non!
+
+# 153091ba
+; Jessy: No!
+Jessy: Salut mec. Ceci est une deuxième boîte de dialogue.
+
+# 80be9cf8
+; Jessy: Hi, man. This is a second dialog.
+Jessy: Voulez-vous jouer à un jeu cool?
+
+# 3fea72e
+; Jessy: Do you want to play a cool game?
+Jessy: Jeu cool, ouais?
+
+# c410fa38
+; Cool game, yeah?
+Allez aux poubelles pour ça!
+
+# cef01ee4
+; 	Jessy: Go to the thrash cans for It!
+	Jessy: Personne ici non plus... Très étrange. Je vais au parking.
+
+# 5165145b
+; 	Jessy: No one here either.... Very strange. I`ll go to Parking.
+	Jessy: Pourquoi es-tu venu? Partir!
+
+# ec8f1dea
+; 	Jessy: Why did you come? Leave!
+	Jessy: Et comment puis-je te remercier?
+
+# 92751259
+; @endif
+@endif

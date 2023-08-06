@@ -1,0 +1,7 @@
+@back InputNameBack
+
+@input name summary:"Enter your name."
+@stop
+
+@bgm Hip_hop_beat loop:true volume:0.3
+@goto Parking.Start

@@ -1,0 +1,69 @@
+; English <en> to French <fr> localization document for `Parking` naninovel script
+
+# 1839a27f
+; Candy: Hay! Do you help me?
+Candy: Foins! M'aides-tu?
+
+# 6bb80f7b
+; Candy: Oh! {name}, honey! Well, you've finally arrived. I've been waiting here to stand like some kind of chicken.
+Candy: Oh! {name}, chéri ! Eh bien, vous êtes enfin arrivé. J'ai attendu ici pour me tenir debout comme une sorte de poulet.
+
+# 168c7234
+; Candy: My car broke down and I can`t use it for my shopping time. It`s a tragedy!!!
+Candy: Ma voiture est tombée en panne et je ne peux pas l'utiliser pour mes courses. C'est une tragédie !!!
+
+# ffa3b3e4
+; Candy: Can you help me, {name}, sweetie? O, please! Please-please-please!!!
+Candy: Pouvez-vous m'aider, {name}, ma chérie ? Ô, s'il te plait ! S'il te plaît s'il te plaît s'il te plaît!!!
+
+# 9257ec86
+; I will thank you... I promise, honey.
+Je te remercierai... Je te le promets, chérie.
+
+# 35b2656c
+; Candy: OK. I`ll try to do something. I`ll go to Garage and ask how to help you with a car.
+Candy: D'accord. Je vais essayer de faire quelque chose. Je vais aller au garage et demander comment vous aider avec une voiture.
+
+# 394d619f
+; Jessy: Did you bring It to me, {name}?
+Jessy: Tu me l'as apporté, {name}?
+
+# 541cc62c
+; @choice I need It for my work, give It to me. goto:.CandyChoise
+@choice J'en ai besoin pour mon travail, donnez-le-moi. goto:.CandyChoise
+
+# 7a2e970e
+; @choice "Give to Candy" goto:.JessyChoise
+@choice "Donne à Candy" goto:.JessyChoise
+
+# 1613e854
+; @choice "Give to Jessy" goto:.MyChoise
+@choice "Donne à Jessy" goto:.MyChoise
+
+# 7d7251b4
+; Candy: "Leave for myself"
+Candy: "Laisser moi-même"
+
+# e3b5d129
+; Candy: You are my sweetie.
+Candy: Tu es ma chérie.
+
+# b7176518
+; Damn It. I'm leaving.
+Bon sang. Je pars.
+
+# 61b8f421
+; 	Candy: Are you stupid?!!! What about my shopping??!!
+	Candy: Es-tu stupide?!!! Et mes courses??!!
+
+# 36e8b417
+; 	Candy: Cool. I'm leaving.
+	Candy: Cool. Je pars.
+
+# e74b086
+; 	Candy: Sorry, girls, I`ll leave it to myself.
+	Candy: Désolé, les filles, je vais me laisser faire.
+
+# 92751259
+; @endif
+@endif

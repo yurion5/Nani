@@ -1,0 +1,144 @@
+#Start
+
+@hideChars
+
+@hideUI LabelParking
+@hideUI LabelGarage
+@hideUI LabelTrashCan
+@hideUI LabelParkingQuest
+@hideUI LabelGarageQuest
+@hideUI LabelTrashCanQuest
+@hideUI MapUI
+
+@showUI ButtonMapUI
+
+@back Locat_1
+
+@if exist_quest=0
+	@goto .Dialog_0
+	@stop
+@endif
+
+@if exist_quest=5
+	@goto .Dialog_4
+	@stop
+@endif
+
+@if exist_quest=6
+	@goto .After_quest_dialog
+	@stop
+@endif
+
+@char Candy pos:70
+Candy: Hay! Do you help me?
+@sfx Candy_hmm
+
+@stop
+
+
+
+#Dialog_0
+
+
+@char Candy
+
+Candy: Oh! {name}, honey! Well, you've finally arrived. I've been waiting here to stand like some kind of chicken.
+@sfx Candy_hmm
+Candy: My car broke down and I can`t use it for my shopping time. It`s a tragedy!!!
+Candy: Can you help me, {name}, sweetie? O, please! Please-please-please!!!
+@sfx Candy_hmm
+Candy: I will thank you... I promise, honey.
+
+@set exist_quest=1
+@set exist_quest_string="Go to Garage and play the Game."
+
+OK. I`ll try to do something. I`ll go to Garage and ask how to help you with a car.
+
+
+
+@back Black
+@goto Garage.Start
+@stop
+
+
+
+#Dialog_4
+
+@char Candy
+@char Jessy
+
+Candy: Did you bring It to me, {name}?
+@sfx Candy_hmm
+Jessy: I need It for my work, give It to me.
+
+;Выбор между двух и переход на скрипт
+@choice "Give to Candy" goto:.CandyChoise
+@choice "Give to Jessy" goto:.JessyChoise
+@choice "Leave for myself" goto:.MyChoise
+
+@stop
+
+
+
+#CandyChoise
+
+@set exist_quest=6
+@set exist_quest_string="No quest."
+@set after_quest=1
+Candy: You are my sweetie.
+@sfx Candy_hmm
+Jessy: Damn It. I'm leaving.
+
+@hide Jessy
+@goto .After_quest_dialog
+@stop
+
+
+
+#JessyChoise
+
+@set exist_quest=6
+@set exist_quest_string="No quest."
+@set after_quest=2
+Candy: Are you stupid?!!! What about my shopping??!!
+@sfx Candy_hmm
+Jessy: Cool. I'm leaving.
+
+@hide Jessy
+@goto .After_quest_dialog
+@stop
+
+
+
+#MyChoise
+
+@set exist_quest=6
+@set exist_quest_string="No quest."
+@set after_quest=3
+Sorry, girls, I`ll leave it to myself.
+Candy: Are you stupid?!!! What about my shopping??!!
+@sfx Candy_hmm
+Jessy: Damn It. I'm leaving.
+
+@hide Jessy
+@goto .After_quest_dialog
+@stop
+
+
+
+#After_quest_dialog
+
+@char Candy
+
+@if after_quest=1
+	Candy: Oh, sweetie, I`ll give you everything you want.
+	@stop
+@endif
+@if after_quest=2
+	Candy: Don`t even ask me for anything.
+	@stop
+@endif
+@if after_quest=3
+	Candy: Don`t even ask me for anything.
+	@stop
+@endif

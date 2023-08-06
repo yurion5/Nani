@@ -1,0 +1,5 @@
+; English <en> to French <fr> localization document for `First_script` naninovel script
+
+# b6a65b7b
+; @input name summary:"Enter your name."
+@input name summary:“Entrez votre nom.”

@@ -1,0 +1,34 @@
+#Start
+
+@hideChars
+
+@hideUI LabelTrashCan
+@hideUI LabelParking
+@hideUI LabelGarage
+@hideUI LabelTrashCanQuest
+@hideUI LabelGarageQuest
+@hideUI LabelParkingQuest
+@hideUI MapUI
+
+@showUI ButtonMapUI
+
+@back Locat_3
+
+Nobody`s here...
+
+@if exist_quest=3
+	@showUI Visual_Item_1
+	Here It is!
+@endif
+@stop
+
+#AfterTakeItem
+
+@if ItemExist("Item_1")
+	@set exist_quest=4
+	@set exist_quest_string="Go to Garage and think a lot."
+	@print "I took It!"
+	@back Black
+	@goto Garage.Start
+@endif
+@stop
